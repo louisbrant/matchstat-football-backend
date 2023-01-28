@@ -4,12 +4,12 @@ exports.DatabaseConfig = void 0;
 const dotenv_1 = require("dotenv");
 (0, dotenv_1.config)();
 exports.DatabaseConfig = {
-    type: 'postgres',
+    type: 'mysql',
     host: `${process.env.POSTGRES_HOST}`,
     username: `${process.env.POSTGRES_USER}`,
     password: `${process.env.POSTGRES_PASSWORD}`,
     database: `${process.env.POSTGRES_DB}`,
-    port: 5432,
+    port: 3306,
     synchronize: false,
     migrationsRun: false,
     entities: ["dist/**/*.entity{.ts,.js}"],
